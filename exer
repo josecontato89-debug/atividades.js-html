@@ -1,0 +1,107 @@
+// 1) Calculadora de Viagem
+// Crie um script que calcule o custo total de uma viagem. Você terá as seguintes variáveis:
+// distanciaKm: A distância total da viagem em quilômetros.
+// consumoKmLitro: O consumo médio do veículo em km por litro.
+// precoLitro: O preço do litro do combustível.
+// Calcule o total de litros necessários e o custo total da viagem. Exiba o resultado de forma
+// clara, formatado para duas casas decimais
+
+// const distanciaKm = 25
+// const consumoKmLitro = 13
+// const precoLitro = 6.39 
+
+// let resultado = (distanciaKm / consumoKmLitro) * precoLitro
+// precoLitro .textContent = formatarMoeda(precoLitro );
+// function formatarMoeda(n){
+//     return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });}
+
+
+// if(consumoKmLitro >= precoLitro && distanciaKm .toFixed(2) ){
+//     console.log(`Em uma distancia de ${distanciaKm} Km, um consumo de ${consumoKmLitro} km/l com o preço do combustivel R$:${precoLitro}, você tera um gasto de R$:${resultado.toFixed(2)}`)
+// }
+
+  //2) Classificador de Triângulos
+// Dados três lados de um triângulo, ladoA, ladoB e ladoC, crie um script que primeiro verifique se eles podem formar um triângulo. Depois, caso possam, classifique o triângulo como:
+// Equilátero: todos os lados são iguais.
+// Isósceles: dois lados são iguais.
+// Escaleno: todos os lados são diferentes.
+// Regra para formar um triângulo: A soma de quaisquer dois lados deve ser sempre maior que o terceiro lado.
+
+//  const ladoA = 3
+//  const ladoB = 6
+//  const ladoC = 5
+// if(ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoB + ladoC > ladoA) {
+//     console.log("Os lados podem formar um triângulo")}
+//  if (ladoA == ladoB && ladoB == ladoC){
+//      console.log('O seu triangulo é equilatero, pois todos os lados são iguais ')
+//  }
+//  else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC){
+//      console.log('O seu triangulo é isoseles, pois dois dos lados são iguais')
+//  }
+//  else if (ladoA != ladoB && ladoB != ladoC && ladoC != ladoA){
+//      console.log('oO seu triangulo é escaleno, pois todos os lados são diferentes')
+//  }
+
+// 3) Verificador de Número Primo
+// Crie um script que, dado um número N, verifique se ele é um número primo. Um número primo é aquele que só é divisível por 1 e por ele mesmo.
+// Dica: Crie um laço for que comece em 2 e vá até N-1. Dentro do laço, verifique se N é divisível por algum desses números. Se for, ele não é primo.
+
+// const numeroParaVerificar = 13;
+// let numPrimo = true; // Começa assumindo que o número é primo
+
+// //Número menor que 2 não pode ser primo
+// if(numeroParaVerificar < 2) {
+//     numPrimo = false;
+// } else {
+//   //O laço testa todos os divisores possíveis, de 2 até um antes do número
+//     for(let i = 2; i <= Math.sqrt (numeroParaVerificar); i++) {
+//       //Se o resto da divisão do número por i for 0...
+//         if(numeroParaVerificar % i === 0) {
+//           //...significa que encontramos um divisor. Logo, não é primo
+//             numPrimo = false;
+//             break;
+//         }
+//     }
+// }
+// //Exibe o resultado final com base no valor da variável 'numPrimo'
+// if(numPrimo) {
+//     console.log(`${numeroParaVerificar} é primo`);
+// } else {
+//     console.log(`${numeroParaVerificar} não é primo`)
+// }
+
+
+// 4) Análise de Turma
+// Dado um array de objetos, onde cada objeto representa um aluno com nome e nota, crie um script que realize as seguintes operações:
+// Calcule e exiba a média de notas da turma.
+// Encontre e exiba o nome do aluno com a maior nota.
+// Crie um novo array contendo apenas os nomes dos alunos que foram aprovados (nota >= 7).
+
+// const turma  = [
+//     {nome:"jose" ,nota:8},
+//     {nome:"cesar" ,nota:7},
+//     {nome:"marcos", nota:5},
+//     {nome:"ygor", nota:4},
+//     {nome:"murilo", nota:8}
+// ];
+// let somaDasNotas = 0;
+// let alunoMelhorNota = turma[0];
+// const alunosAprovados = [];
+// for( let i = 0; i < turma.length; i++){
+//     const aluno = turma[i];
+    
+//     somaDasNotas += aluno.nota
+
+//     if(aluno.nota > alunoMelhorNota.nota){
+//         alunoMelhorNota = aluno
+//     }
+//     if(aluno.nota >= 7){
+//         alunosAprovados.push(aluno.nome);
+//     }
+// }
+
+// const mediaDaTurma = somaDasNotas / turma.length;
+
+// console.log(`A media de notas da turma é : ${mediaDaTurma.toFixed(2)}`)
+// console.log(` O alino com a melhor nota é : ${alunoMelhorNota.nome} (nota ${alunoMelhorNota.nota})`)
+// console.log(`Os alunos aprovados são: ${alunosAprovados}`);
